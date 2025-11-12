@@ -13,7 +13,7 @@ node {
     }
 }
   stage('Push image') {
-    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-creds') {
+    docker.withRegistry('https://registry.hub.docker.com', 'jinseon901') {
       app.push(env.BUILD_NUMBER)
       app.push('latest')
     }

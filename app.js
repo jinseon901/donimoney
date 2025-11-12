@@ -81,7 +81,7 @@ app.use((req, res, next) => {
   next();
 });
 
-//사용자 보유 돈 보여주기
+//사용자 보유 머니 보여주기
 app.use(async (req, res, next) => {
   
   next();

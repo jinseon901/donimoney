@@ -96,7 +96,6 @@ app.use((req, res, next) => {
   res.locals.showHomeAndCloseButtons = false; // 기본값
   next();
 });
-
 app.use((req, res, next) => {
   const showBtns = [/^\/game/, /^\/quiz\/start/];
   res.locals.showHomeAndCloseButtons = showBtns.some(pattern => pattern.test(req.originalUrl));

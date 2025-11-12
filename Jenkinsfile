@@ -8,9 +8,10 @@ node {
   }
   stage('Test image') {
     app.inside {
-      sh 'make test'
+      sh 'npm ci'
+      sh 'npm test'
     }
-  }
+}
   stage('Push image') {
     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-creds') {
       app.push(env.BUILD_NUMBER)

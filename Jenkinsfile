@@ -1,6 +1,7 @@
 node {
 def app
 stage('Clone repository') {
+git branch: 'main',
 git 'https://github.com/jinseon901/donimoney.git'
 }
 stage('Build image') {

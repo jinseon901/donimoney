@@ -1,5 +1,11 @@
 node {
   def app
+  environment{
+    PROJECT_ID = 'resonant-sunset-466808-s8'
+    CLUSTER_NAME = 'kube'
+    LOCATION = 'asia-northeast3-a'
+    CREDENTIALS_ID = 'gke'
+  }
   stage('Checkout') {
     checkout scm   // 현재 브랜치(main)로 체크아웃
   }

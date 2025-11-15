@@ -11,5 +11,5 @@ spec:
   ports:
     - name: http
       port: 80 #외부 노출 포트
-      targetPort: 8080  #컨테이너 포트
+      targetPort: 3000  #컨테이너 포트
 

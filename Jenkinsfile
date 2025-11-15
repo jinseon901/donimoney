@@ -29,7 +29,7 @@ node {
     when { branch 'main' }
     steps {
       // deployment.yaml 안의 이미지 태그를 이번 빌드 태그로 교체
-      sh "sed -i "s#${DOCKER_IMAGE}:[^\"']*#${DOCKER_IMAGE}:${BUILD_NUMBER}#g" k8s/deployment.yaml:
+      sh """sed -i 's#${DOCKER_IMAGE}:[^[:space:]]*#${DOCKER_IMAGE}:${BUILD_NUMBER}#g' k8s/deployment.yaml"""
       step([$class: 'KubernetesEngineBuilder',
         projectId:     env.PROJECT_ID,
         clusterName:   env.CLUSTER_NAME,

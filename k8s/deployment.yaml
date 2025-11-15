@@ -1,8 +1,5 @@
 apiVersion: apps/v1
 kind: Deployment
-env:
-  - name: SKIP_DB_SYNC
-    value: "true"
 metadata:
   name: donimoney
   labels:
@@ -22,6 +19,9 @@ spec:
           image: docker.io/jinseon901/test:latest
           ports:
             - containerPort: 3000
+          env:
+            - name: SKIP_DB_SYNC
+              value: "true"
           readinessProbe:
             httpGet:
               path: /

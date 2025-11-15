@@ -49,7 +49,7 @@ pipeline {
         }
 
         stage('Deploy to GKE') {
-            //main 브랜치에서만 배포
+            //main 브랜치만 배포
             when {
                 branch 'main'
             }

@@ -63,7 +63,7 @@ pipeline {
                     clusterName:     env.CLUSTER_NAME,
                     location:        env.LOCATION,
                     credentialsId:   env.CREDENTIALS_ID,
-                    manifestPattern: 'k8s/deployment.yaml,k8s/service.yaml',
+                    manifestPattern: 'k8s/',
                     verifyDeployments: true
                 ])
             }

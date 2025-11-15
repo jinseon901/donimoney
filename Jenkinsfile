@@ -7,7 +7,7 @@ pipeline {
         CLUSTER_NAME  = 'kube'
         LOCATION      = 'asia-northeast3-a'
         CREDENTIALS_ID = 'gke'
-        DOCKER_IMAGE  = 'docker.io/jinseon901/test'
+        DOCKER_IMAGE  = 'jinseon901/test'
     }
 
     stages {

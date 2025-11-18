@@ -21,7 +21,7 @@ spec:
             - containerPort: 3000
           env:
             - name: SKIP_DB_SYNC
-              value: "true"
+              value: "false"
             - name: DB_HOST
               valueFrom:
                 secretKeyRef:
